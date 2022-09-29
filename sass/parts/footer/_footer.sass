@@ -1,0 +1,217 @@
+.footer
+    position: relative
+    &_top_block
+        display: flex
+        justify-content: space-between
+        padding-top: 100px
+        padding-bottom: 71px
+        +max-screen($breakpoint-xm)
+            padding-top: 71px
+        +max-screen(1200px)
+            flex-direction: column
+    .section-bg
+        background-color: #E3DDD3
+    .logo_block
+        width: 125px
+        +max-screen($breakpoint-xm)
+            width: 100px
+            margin-right: 15px
+        +max-screen(1200px)
+            margin-right: auto
+            margin-left: auto
+    .menu_block
+        width: 100%
+        max-width: 595px
+        +max-screen($breakpoint-xl)
+            max-width: 525px
+        +max-screen($breakpoint-xm)
+            margin-right: 15px
+        +max-screen(1200px)
+            margin-right: auto
+            margin-left: auto
+            margin-top: 30px
+        .text_block
+            color: rgba(0, 0, 0, 0.5)
+            font-family: $font-family-title
+            +max-screen(1200px)
+                text-align: center
+        .socials_block
+            display: flex
+            margin-top: 38px
+            li
+                max-width: 38px
+                margin-right: 8px
+                transition: .15s
+                &:hover
+                    transition: .15s
+                    transform: translate(0, 4px)
+        .footer_block
+            display: flex
+            justify-content: space-between
+            font-family: $font-family-title
+            margin-top: 25px
+            padding-bottom: 32px
+            border-bottom: 1px solid #B69970
+            +max-screen($breakpoint-sm)
+                flex-direction: column
+            .col
+                width: 60%
+                +max-screen($breakpoint-sm)
+                    width: 100%
+                &:last-of-type
+                    width: 30%
+                    display: flex
+                    +max-screen($breakpoint-sm)
+                        width: 100%
+            .phone_block
+                position: relative
+                padding-left: 27px
+                display: flex
+                &::before
+                    position: absolute
+                    content: ''
+                    width: 16px
+                    height: 16px
+                    background-image: url('../assets/images/icon/phone_icon.svg')
+                    background-size: contain
+                    background-repeat: no-repeat
+                    background-position: center
+                    left: 0
+                    top: calc( 50% - 8px )
+                a
+                    color: $color-blue
+                    font-weight: 700
+                    transition: 0.4s
+                    &:hover
+                        color: $color-gold
+                span
+                    color: $color-blue
+                    font-weight: 700
+                    margin-left: 5px
+                    margin-right: 5px
+            .email_block
+                position: relative
+                padding-left: 27px
+                &::before
+                    position: absolute
+                    content: ''
+                    width: 16px
+                    height: 12px
+                    background-image: url('../assets/images/icon/email_icon.svg')
+                    background-size: contain
+                    background-repeat: no-repeat
+                    background-position: center
+                    left: 0
+                    top: calc( 50% - 6px )
+                a
+                    color: $color-blue
+                    font-weight: 700
+                    transition: 0.4s
+                    &:hover
+                        color: $color-gold
+            .socials_block
+                margin-top: 0
+                align-self: end
+                +max-screen($breakpoint-sm)
+                    margin-top: 30px
+                    align-self: center
+        .menu_block_inner
+            margin-top: 47px
+            display: flex
+            justify-content: space-between
+            +max-screen($breakpoint-sm)
+                flex-direction: column
+            .menu_col
+                width: max-content
+                max-width: 230px
+                +max-screen($breakpoint-sm)
+                    max-width: none
+                    margin-bottom: 30px
+                    &:last-of-type
+                        margin-bottom: 0
+            h3
+                margin-bottom: 6px
+                color: $color-blue
+            li
+                a
+                    color: #000
+                    font-size: 16px
+                    transition: 0.4s
+                    &:hover
+                        color: $color-gold
+    .map_block
+        width: 100%
+        max-width: 535px
+        position: relative
+        +max-screen($breakpoint-xm)
+            max-width: 475px
+        +max-screen(1200px)
+            max-width: 525px
+            margin-left: auto
+            margin-right: auto
+            margin-top: 50px
+        .map_content
+            display: flex
+            flex-direction: column
+            position: absolute
+            width: 202px
+            height: 202px
+            left: 30px
+            bottom: -51px
+            background-color: $color-blue
+            padding: 27px
+            border-radius: 50%
+            +max-screen($breakpoint-xm)
+                bottom: -21px
+                left: 20px
+            +max-screen($breakpoint-sm)
+                left: -30px
+                bottom: -61px
+            img
+                max-width: 50px
+                align-self: center
+                margin-bottom: 13px
+            p
+                font-family: $font-family-title
+                text-align: center
+
+    &_bottom_block
+        position: relative
+        display: flex
+        justify-content: space-between
+        padding: 29px 0
+        +max-screen($breakpoint-xm)
+            padding: 19px 0
+        +max-screen($breakpoint-md)
+            flex-direction: column
+        .section-bg
+            background-color: #fff
+        .copyright
+            align-self: center
+            +max-screen($breakpoint-md)
+                order: 2
+            +max-screen($breakpoint-sm)
+                text-align: center
+            p,
+            a
+                color: #000
+                transition: 0.4s
+            a:hover
+                color: $color-gold
+        .developer
+            max-width: 82px
+            align-self: center
+            +max-screen($breakpoint-md)
+                order: 1
+                max-width: 52px
+    &::before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 142px
+        left: 0
+        top: -121px
+        background-image: url('../assets/images/lines/footer_bg_top.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center

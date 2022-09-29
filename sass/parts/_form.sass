@@ -1,0 +1,151 @@
+.wpcf7-submit
+    background: $color-primary
+    color: $color-primary
+    transition: .3s
+    font-style: normal
+    font-weight: 500
+    font-size: 17px
+    line-height: 130.5%
+    padding: 21px 68px 21px 32px
+    height: 64px
+    border: none
+    text-align: left
+    background-image: url('../assets/images/icons/arrow-right.svg')
+    background-position: bottom 24px right 23px
+    background-size: 16px
+    background-repeat: no-repeat
+    cursor: pointer
+    box-sizing: border-box
+    +max-screen(1500px)
+        height: 54px
+        padding: 15px 58px 15px 32px
+        font-size: 15px
+        background-position: bottom 20px right 23px
+    +max-screen($breakpoint-sm)
+        height: 44px
+        padding: 10px 58px 10px 32px
+        background-position: bottom 15px right 23px
+    &:hover
+        background: #fff
+        background-image: url('../assets/images/icons/arrow-right.svg')
+        background-position: bottom 24px right 23px
+        background-size: 16px
+        background-repeat: no-repeat
+        +max-screen(1500px)
+            background-position: bottom 20px right 23px
+        +max-screen($breakpoint-sm)
+            background-position: bottom 15px right 23px
+.wpcf7-radio
+    display: flex
+    flex-direction: column
+.wpcf7
+    input[type='radio']
+        color: $color-primary
+        align-self: center
+        margin-right: 5px
+    input[type="date"]
+        display: block
+        position: relative
+        padding: 6px 10px
+        width: 100%
+        font-weight: 300
+        font-size: 18px
+        color: #9c9c9c
+        border: none
+        border-bottom: 1px solid #e2eef3
+        background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 20 22'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23688EBB' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' transform='translate(1 1)'%3E%3Crect width='18' height='18' y='2' rx='2'/%3E%3Cpath d='M13 0L13 4M5 0L5 4M0 8L18 8'/%3E%3C/g%3E%3C/svg%3E") right 5px center no-repeat;
+        cursor: pointer
+        +max-screen(1500px)
+            font-size: 15px
+        &::-webkit-clear-button,
+        &::-webkit-inner-spin-button
+            display: none
+
+        &::-webkit-calendar-picker-indicator
+            position: absolute
+            width: 2.5rem
+            height: 100%
+            top: 0
+            right: 0
+            bottom: 0
+            opacity: 0
+            cursor: pointer
+            color: rgba(0, 120, 250, 1)
+            background: rgba(0, 120, 250, 1)
+
+    textarea
+        width: 100%
+        padding: 10px
+        background: none
+        border: 1px solid #e2eef3
+        font-style: normal
+        font-weight: 300
+        font-size: 18px
+        line-height: 130%
+        color: #9c9c9c
+        +max-screen(1500px)
+            font-size: 15px
+    select
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        background-image: url(...)
+        cursor: pointer
+        width: 100%
+        padding: 0 10px
+        background: none
+        border: none
+        border-bottom: 1px solid #e2eef3
+        height: 43px
+        font-style: normal
+        font-weight: 300
+        font-size: 18px
+        line-height: 130%
+        color: #9c9c9c
+        +max-screen(1500px)
+            font-size: 15px
+        +max-screen(375px)
+            font-size: 12px
+            height: 33px
+    .select .wpcf7-form-control-wrap::after,
+        content: ""
+        width: 10px
+        height: 6px
+        background: #0c6f97
+        position: absolute
+        top: 12px
+        right: 9px
+        transform: translateY(-50%)
+        clip-path: polygon(100% 0,100% 0,50% 100%,0 0)
+        transition: .3s
+        z-index: 1
+
+.page-template-form-page
+    .contact_section .form_block
+        .wpcf7-not-valid-tip
+            font-size: 10px
+            margin-top: 5px
+
+        label,p
+            color: #0c6f97
+            font-size: 17px
+            line-height: 17px
+            margin-bottom: 10px
+        label
+            display: block
+        .wpcf7-list-item label
+            display: flex
+        span.wpcf7-list-item-label
+            font-size: 15px
+            align-self: center
+        .form_field:nth-of-type(2)
+            margin-top: 0
+        .form_row.flex_row
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            .form_field
+                width: 100%
+                max-width: 49%
+                +max-screen($breakpoint-lg)
+                    max-width: none

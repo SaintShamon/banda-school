@@ -1,0 +1,117 @@
+.cards_list
+    .section-bg
+        background-image: url('../assets/images/school_bg.svg')
+        background-position: top
+    .main_block
+        padding: 200px 0 300px
+        display: flex
+        justify-content: space-between
+        +max-screen(1200px)
+            flex-direction: column
+            padding: 100px 0 200px
+        +max-screen($breakpoint-md)
+            padding: 100px 0 300px
+    .content_col
+        max-width: 431px
+        +max-screen($breakpoint-xl)
+            max-width: 25vw
+        +max-screen(1200px)
+            max-width: 431px
+            margin-left: auto
+            margin-right: auto
+        .title
+            h2
+                text-align: left
+                +max-screen(1200px)
+                    text-align: center
+        .subtitle
+            p
+                text-align: left
+                +max-screen(1200px)
+                    text-align: center
+    .content-block
+        margin-top: 22px
+        color: black
+        a.button
+            margin-top: 44px
+            margin-left: 0
+            +max-screen(1200px)
+                margin-left: auto
+    .cards_col
+        position: relative
+        width: 100%
+        max-width: 1193px
+    &_row
+        display: flex
+        justify-content: space-between
+        width: 100vw
+        max-width: 1193px
+        height: 100%
+        position: absolute
+        top: 0
+        right: 71%
+        margin-right: calc(-1 * (100vw / 2))
+        z-index: 1
+        +max-screen($breakpoint-xxxl)
+            max-width: 63vw
+        +max-screen($breakpoint-xl)
+            max-width: 68vw
+        +max-screen(1200px)
+            width: 100%
+            max-width: none
+            position: relative
+            top: auto
+            right: auto
+            margin-right: auto
+            margin-left: auto
+            margin-top: 50px
+        +max-screen($breakpoint-md)
+            flex-direction: column
+    &_block
+        position: relative
+        display: flex
+        align-self: center
+        align-items: center
+        width: 100%
+        margin-right: 22px
+        width: 100%
+        max-width: 360px
+        height: 462px
+        background-position: center !important
+        background-size: cover !important
+        +max-screen($breakpoint-xl)
+            height: 402px
+        +max-screen($breakpoint-md)
+            margin-bottom: 30px
+            margin-right: 0
+        &:last-of-type
+            margin-right: 0
+            +max-screen($breakpoint-md)
+                margin-bottom: 0
+        &:nth-of-type(2)
+            width: 100%
+            max-width: 428px
+            height: 543px
+            +max-screen($breakpoint-xl)
+                height: 503px
+            +max-screen($breakpoint-md)
+                max-width: 360px
+                height: 402px
+        .inner_block
+            padding: 0 15px
+            width: 100%
+        .title_block
+            p
+                text-align: center
+        .content-block
+            p
+                text-align: center
+                color: #fff
+                font-family: $font-family-title
+        a
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 2

@@ -1,0 +1,124 @@
+.news
+    .main_block
+        display: flex
+        padding-top: 200px
+        padding-bottom: 350px
+        +max-screen($breakpoint-xm)
+            padding-top: 100px
+        +max-screen(1200px)
+            flex-direction: column
+            padding-bottom: 150px
+    .left_col
+        width: 100%
+        max-width: 442px
+        position: relative
+        +max-screen(1200px)
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 150px
+        .subtitle
+            p
+                text-align: left
+                +max-screen(1200px)
+                    text-align: center
+        .title
+            h2
+                text-align: left
+                +max-screen(1200px)
+                    text-align: center
+        .content-block
+            margin-top: 25px
+            color: #000
+            +max-screen(1200px)
+                text-align: center
+        .socials_block
+            display: flex
+            margin-top: 38px
+            +max-screen(1200px)
+                margin-left: auto
+                margin-right: auto
+                justify-content: center
+            li
+                max-width: 38px
+                margin-right: 8px
+                transition: .15s
+                &:hover
+                    transition: .15s
+                    transform: translate(0, 4px)
+        .lion_img
+            position: absolute
+            width: 451.07px
+            height: 210.56px
+            left: 0
+            bottom: -98%
+            z-index: 2
+            +max-screen($breakpoint-xxl)
+                width: 401.07px
+                height: 160.56px
+                bottom: -88%
+            +max-screen($breakpoint-xl)
+                width: 20vw
+                height: auto
+                bottom: -120%
+            +max-screen(1200px)
+                bottom: -150px
+                left: calc( 50% - 10vw )
+            +max-screen($breakpoint-sm)
+                width: 50vw
+                left: calc( 50% - 25vw )
+    &_col
+        position: relative
+        margin-left: 86px
+        +max-screen(1200px)
+            margin-left: auto
+            margin-top: 50px
+            max-width: 540px
+            margin-right: auto
+            width: 100%
+        .news_list
+            display: flex
+            width: 100vw
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            margin-left: 0
+            +max-screen($breakpoint-xl)
+                max-width: 60vw
+            +max-screen(1200px)
+                position: relative
+                width: 100%
+                max-width: none
+                left: auto
+                top: auto
+                flex-direction: column
+        .news_block
+            width: 566px
+            height: 460px
+            margin-right: 22px
+            background-size: cover !important
+            background-repeat: no-repeat !important
+            background-position: center !important
+            +max-screen($breakpoint-xxl)
+                width: 506px
+                height: 420px
+            +max-screen($breakpoint-xl)
+                width: 50%
+                height: 360px
+            +max-screen(1200px)
+                width: 100%
+                margin-bottom: 22px
+            &:last-of-type
+                margin-right: 0
+                +max-screen(1200px)
+                    margin-bottom: 0
+            a
+                display: flex
+                text-align: center
+                width: 100%
+                height: 100%
+
+                span
+                    align-self: center
+                    text-align: center
+                    width: 100%

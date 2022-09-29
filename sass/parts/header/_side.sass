@@ -1,0 +1,356 @@
+.side-panel
+    position: fixed
+    top: 0
+    right: 0
+    display: block
+    z-index: 10
+    width: 100%
+    height: 100%
+    overflow: auto
+    transition: .2s ease-out
+    transform: translateX(100%)
+    padding-left: 0
+    border-top: 1px solid transparentize($default-text-color, 0.4)
+
+    .admin-bar
+        top: 32px
+
+    &.active
+        transform: translateX(0%)
+
+    &.service
+        top: 0 !important
+
+.side-inner
+    min-height: 100vh
+    overflow-x: hidden
+    background-color: #E9E4DC
+    .container
+        +max-screen($breakpoint-md)
+            padding-left: 30px
+            padding-right: 30px
+.side_bg_img
+    position: absolute
+    width: 889.68px
+    height: 729.13px
+    left: -100px
+    bottom: 0
+    img
+        height: 100%
+    +max-screen($breakpoint-xxl)
+        width: 40vw
+        height: 35vw
+    +max-screen($breakpoint-md)
+        width: 300px
+        height: auto
+        left: -50px
+.side_bg_grass
+    position: absolute
+    width: 191.48px
+    height: 176.49px
+    right: 32px
+    bottom: 0
+    img
+        height: 100%
+        +max-screen($breakpoint-md)
+            height: auto
+    +max-screen($breakpoint-md)
+        height: auto
+        width: 151px
+
+.side-panel-overlay
+    overflow: hidden
+
+    &.service::after
+        top: 0 !important
+        z-index: 2
+
+    &.service
+        .fixed-header
+            .bottom_header
+                opacity: 0
+
+.side-panel-overlay:after
+    content: ""
+    position: fixed
+    top: 70px
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(31, 28, 28, 0.8)
+    backdrop-filter: blur(20px)
+    z-index: 2
+// .admin-bar.side-panel-overlay:after,
+// .admin-bar .side-panel
+//     top: 124px
+.side_header
+    position: relative
+    display: flex
+    justify-content: space-between
+    padding: 29px 0 0
+    .header__menu
+        align-self: center
+        margin-right: 32px
+        ul
+            display: flex
+        li
+            position: relative
+            margin-right: 30px
+            line-height: normal
+            &::before
+                position: absolute
+                content: '/'
+                right: -20px
+                color: $color-blue
+            a
+                text-transform: uppercase
+                font-weight: 700
+                font-size: 14px
+                line-height: 19px
+                text-align: right
+                letter-spacing: 0.05em
+                color: $color-blue
+                transition: .2s ease-out
+                &:hover
+                    color: $color-red
+
+            &:last-of-type
+                margin-right: 0
+                &::before
+                    display: none
+    .btn_close
+        display: flex
+        justify-content: space-between
+        align-items: center
+        align-self: center
+        width: 72px
+        height: 24px
+        position: relative
+        cursor: pointer
+        margin-top: 4px
+        &:hover
+            span.line
+                background-color: $color-red
+            .text
+                color: $color-red
+        span.line:first-child
+            transform: translate(-50%, -50%) rotate(45deg)
+
+        span.line:last-child
+            transform: translate(-50%, -50%) rotate(-45deg)
+        button
+            position: relative
+            background: none
+            border: none
+            display: block
+            width: 14px
+            height: 14px
+
+        .text
+            display: block
+            align-self: center
+            text-transform: uppercase
+            font-weight: 700
+            font-size: 14px
+            line-height: 19px
+            text-align: right
+            letter-spacing: 0.05em
+            color: $color-blue
+            transition: .2s ease-out
+        span.line
+            position: absolute
+            top: 50%
+            left: 50%
+            display: block
+            width: 14px
+            height: 2px
+            background-color: $color-blue
+            transition: .2s ease-out
+.side_menu_block
+    margin-top: 109px
+    max-width: 366px
+    width: 100%
+    margin-right: 466px
+    margin-left: auto
+    +max-screen($breakpoint-xxl)
+        margin-right: 20vw
+    +max-screen($breakpoint-xl)
+        margin-top: 49px
+        max-width: 306px
+    +max-screen(1200px)
+        margin-right: 35vw
+    +max-screen($breakpoint-md)
+        margin-right: 25px
+    &.header__menu
+        display: block
+    nav
+        margin: 0 auto
+        width: 100%
+    ul
+        text-align: center
+        display: flex
+        flex-direction: column
+        position: relative
+        a
+            font-weight: 400
+            font-size: 35px
+            line-height: 60px
+            color: $color-blue
+            font-family: $font-family-title
+            text-transform: none
+            transition: .2s ease-out
+            +max-screen($breakpoint-xxl)
+                font-size: 30px
+                line-height: 50px
+            +max-screen($breakpoint-xl)
+                font-size: 22px
+                line-height: 34px
+            &:hover
+                color: $color-red
+                font-weight: 700
+                transition: .2s ease-out
+        li
+            padding: 0
+            margin-bottom: 0
+            margin-right: 0
+            width: 100%
+            height: auto
+            line-height: 100%
+            text-align: right
+            position: unset
+            transition: .2s ease-out
+            &::before
+                display: none
+            &:last-of-type
+                margin-bottom: 0
+            // &.active
+            //     border-bottom: 4px solid $color-red
+            //     +max-screen($breakpoint-xl)
+            //         border-bottom: 2px solid $color-red
+            //     a
+            //         font-weight: 700
+            //         color: $color-red
+            //         transition: .2s ease-out
+            &:hover
+                border-bottom: 4px solid $color-red
+                transition: .2s ease-out
+                +max-screen($breakpoint-xl)
+                    border-bottom: 2px solid $color-red
+                +max-screen($breakpoint-md)
+                    border: none
+
+            &.menu-item-has-children
+                position: relative
+                &:hover
+                    a
+                        font-weight: 700
+                        color: $color-red
+                    +min-screen($breakpoint-md)
+                        .sub-menu
+                            display: block
+                            visibility: visible
+                            opacity: 1
+                            &::before
+                                display: block
+                                position: absolute
+                                content: ''
+                                left: -35px
+                                top: 0
+                                width: 100%
+                                height: 100%
+                +max-screen($breakpoint-md)
+                    .menu-item__icon
+                        position: absolute
+                        content: ''
+                        display: block
+                        width: 20px
+                        height: 20px
+                        right: -30px
+                        top: calc( 50% - 9px )
+                        text-align: center
+                        cursor: pointer
+                        +max-screen(360px)
+                            right: -20px
+                        &::after
+                            position: absolute
+                            content: '+'
+                            top: 0
+                            left: 0
+                            width: 100%
+                            height: 20px
+                            color: $color-blue
+                &.active
+                    .sub-menu
+                        // display: block
+                        visibility: visible
+                        opacity: 1
+            &.menu-item-has-children.active
+                +max-screen($breakpoint-md)
+                    .menu-item__parent
+                        border-bottom: 2px solid $color-red
+                    .menu-item__icon
+                        top: 5px
+                        &::after
+                            content: '-'
+            &.menu-item.search
+                .menu-item__parent
+                    display: flex
+                    justify-content: flex-end
+                a
+                    order: 2
+                .menu-item__icon
+                    position: relative
+                    content: ''
+                    display: block
+                    width: 20px
+                    height: 34px
+                    cursor: pointer
+                    order: 1
+                    margin-right: 8px
+                    &::after
+                        position: absolute
+                        content: ''
+                        top: calc( 50% - 12px )
+                        left: 0
+                        width: 20px
+                        height: 20px
+                        background-image: url('../assets/images/icon/search_icon.svg')
+                        background-position: center
+                        background-size: contain
+                        background-repeat: no-repeat
+                &:hover
+                    .menu-item__icon
+                        &::after
+                            background-image: url('../assets/images/icon/search_icon_red.svg')
+    .sub-menu
+        display: none
+        opacity: 0
+        visibility: hidden
+        transition: .2s
+        position: absolute
+        top: 0
+        right: calc(-100% - 23px)
+        margin-top: 0
+        width: 297px
+        +max-screen($breakpoint-md)
+            position: relative
+            top: auto
+            right: auto
+            width: 100%
+            margin-top: 10px
+        a
+            font-weight: 700
+            color: $color-red
+            font-size: 20px
+            line-height: 180%
+            +max-screen($breakpoint-xl)
+                font-size: 16px
+        li
+            padding: 0
+            margin-bottom: 5px
+            position: relative
+            text-align: left
+            +max-screen($breakpoint-md)
+                text-align: right
+            &:hover
+                border: 0

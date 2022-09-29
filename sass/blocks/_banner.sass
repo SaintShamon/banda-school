@@ -1,0 +1,86 @@
+.banner
+    .section-bg
+        background-position: 50% !important
+        background-size: cover !important
+        background-repeat: no-repeat !important
+    .main_block
+        padding-top: 39px
+        padding-bottom: 361px
+        +max-screen($breakpoint-xl)
+            padding-top: 0
+            padding-bottom: 301px
+        +max-screen($breakpoint-sm)
+            padding-top: 39px
+    .logo_block
+        margin: 0 auto
+        width: 100%
+        max-width: 246px
+    .title_block
+        text-align: center
+    .explore
+        position: absolute
+        bottom: 0
+        left: calc( 50% - 92px )
+        display: flex
+        flex-direction: column
+        margin: 0 auto
+        width: 184px
+        height: 184px
+        background: $color-gold
+        border: none
+        border-radius: 50%
+        transition: .15s
+        +max-screen($breakpoint-xl)
+            width: 144px
+            height: 144px
+            left: calc( 50% - 72px )
+        img
+            display: block
+            width: 98px
+            margin: 34px auto 0
+            +max-screen($breakpoint-xl)
+                width: 68px
+                margin: 24px auto 0
+        span
+            text-align: center
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            display: flex
+            align-items: center
+            text-align: center
+            text-transform: uppercase
+            color: #FFFFFF
+            margin: 3px auto 0
+            +max-screen($breakpoint-xl)
+                font-size: 14px
+        &::after
+            position: absolute
+            content: ''
+            bottom: 25px
+            width: 8px
+            height: 23px
+            left: calc( 50% - 4px )
+            background-image: url('../assets/images/big_arrow.svg')
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center
+            +max-screen($breakpoint-xl)
+                bottom: 15px
+        &:hover
+            transform: scale(1.05)
+            transition: .15s
+            &::after
+                transition: .15s
+                bottom: 20px
+    &::before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 182px
+        left: 0
+        bottom: -91px
+        background-image: url('../assets/images/lines/banner_line.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center

@@ -1,0 +1,45 @@
+.button
+    display: flex
+    align-items: center
+    position: relative
+    z-index: 2
+    appearance: none
+    max-width: 196px
+    border-radius: 0
+    box-sizing: border-box
+    transition: 0.3s
+    background: $color-blue
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 120%
+    padding: 15px 20px
+    text-align: center
+    color: $color-primary
+    font-family: $font-family-base
+    margin-left: auto
+    margin-right: auto
+    +min-screen($breakpoint-xl)
+        font-size: 18px
+    +max-screen($breakpoint-xl)
+    .content-block &
+        color: $color-primary
+        font-weight: 700
+    &:hover
+        background: darken($color-gold, 20%)
+        color: $color-primary
+        transition: 0.3s left
+    &--arrow
+        justify-content: space-between
+
+        svg
+            display: block
+            transition: 0.3s left
+
+        &:hover
+            svg
+                transition: .15s
+                transform: translate(7px, 0)
+                // path {
+                //     fill: $color-green;
+                // }
