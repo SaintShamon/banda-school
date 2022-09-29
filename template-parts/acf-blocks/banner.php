@@ -39,9 +39,11 @@
             ?>
         </div>
     </div>
-    <a class="explore" href="#text_center">
-        <img src="<?= get_template_directory_uri() ?>/assets/images/pig_img.svg" alt="">
-        <span>Explore</span>
-    </a>
+    <?php if(is_front_page()): ?>
+        <a class="explore" href="#text_center">
+            <img src="<?= get_template_directory_uri() ?>/assets/images/pig_img.svg" alt="">
+            <span>Explore</span>
+        </a>
+    <?php endif; ?>
 </section>
 <?php endif; ?>
