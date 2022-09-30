@@ -3,12 +3,14 @@ import 'slick-carousel';
 
 function slider() {
 
+    let slider = $('.slider-list');
     let pagination = $('.slider-pagination');
     let prev = pagination.find('.prev');
     let next = pagination.find('.next');
+    let btn = pagination.find('.slide-btn');
 
-    $('.slider-list').slick({
-        arrows: false,
+    slider.slick({
+        arrows: true,
         infinite: false,
         cssEase: 'linear',
         slidesToShow: 1,
@@ -24,14 +26,30 @@ function slider() {
         // }]
     });
 
-    pagination.find('.slide-btn').each(function () {
+    btn.each(function () {
         $(this).click(function(){
             let index = $(this).data('slide');
-            $('.slider-list').slick('slickGoTo',parseInt(index));
-            $('.slider-pagination').find('.slide-btn').removeClass('active');
-            $(this).addClass('active');
+            slider.slick('slickGoTo',parseInt(index));
         });
     })
+
+    slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+        let slide = $('.slick-active').data('slick-index')
+
+        btn.each(function (){
+            let data = $(this).data('slide');
+            if (data === slide) {
+                pagination.find('.slide-btn').removeClass('active');
+                $(this).addClass('active');
+            }
+            // let btnActive = $(this).find('.active');
+            // console.log(slide >= 4 && slide+1 !== btn.length)
+            // if (slide >= 4 && slide+1 !== btn.length) {
+            //     $(this).hide();
+            // }
+        });
+    });
+
 
 
 

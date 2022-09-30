@@ -27,7 +27,7 @@ $image_list = get_sub_field('image_list');
                         </svg>
                     </li>
                     <?php for ($i=0; $i < count($image_list); $i+=1 ): ?>
-                        <li class="slide-btn" data-slide="<?php echo $i; ?>"><?php echo $i + 1; ?></li>
+                        <li class="slide-btn <?php echo $i===0?'active':''; ?>" data-slide="<?php echo $i; ?>"><?php echo $i + 1; ?></li>
                     <?php endfor; ?>
                     <li class="next">
                         <svg width="25" height="8" viewBox="0 0 25 8" fill="none" xmlns="http://www.w3.org/2000/svg">
