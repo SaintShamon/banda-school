@@ -28,6 +28,10 @@ import {
     showElem
 } from './template-parts/blocks/accordion';
 
+import {
+    slider
+} from './template-parts/blocks/slider';
+
 header();
 footer();
 calltoaction();
@@ -35,3 +39,4 @@ lazy();
 lottie();
 scrollToAnchor();
 showElem();
+slider();
