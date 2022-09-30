@@ -3,21 +3,21 @@ import { gsap } from "gsap";
 
 
 function scrollToAnchor(){
-    var pLink = $(location).attr('origin') + $(location).attr('pathname');
-    console.log(pLink);
-    $('a[href^="#"]:not(.slider-arrow, .quote--button), .anchor--button a').click(function(e){
-        var itemLink = $(this).attr('href').split('#');
-        if(itemLink[0] == pLink){
-            e.preventDefault();
-        }
-        let href = '#' + itemLink[1];    
-        $('html, body').animate({ scrollTop: $(href).offset().top - 100}, 500);
-    })
-    var target = $(location).attr("hash");
-    var offset = ($(this).attr('data-offset') ? $(this).attr('data-offset') : 0);
-    $('body,html').animate({
-        scrollTop: $(target).offset().top - offset - 100
-    }, 500);
+    // var pLink = $(location).attr('origin') + $(location).attr('pathname');
+    // console.log(pLink);
+    // $('a[href^="#"]:not(.slider-arrow, .quote--button), .anchor--button a').click(function(e){
+    //     var itemLink = $(this).attr('href').split('#');
+    //     if(itemLink[0] == pLink){
+    //         e.preventDefault();
+    //     }
+    //     let href = '#' + itemLink[1];
+    //     $('html, body').animate({ scrollTop: $(href).offset().top - 100}, 500);
+    // })
+    // var target = $(location).attr("hash");
+    // var offset = ($(this).attr('data-offset') ? $(this).attr('data-offset') : 0);
+    // $('body,html').animate({
+    //     scrollTop: $(target).offset().top - offset - 100
+    // }, 500);
     
     
         

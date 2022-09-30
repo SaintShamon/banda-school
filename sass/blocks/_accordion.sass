@@ -1,0 +1,30 @@
+.accordion
+  color: $color-gold
+  li
+    &:first-child
+      .accordion-item
+        border-top: 2px solid $color-gold
+  &-item
+    padding: 35px 14px
+    border-bottom: 2px solid $color-gold
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      background: url(../assets/images/arrow.svg) no-repeat
+      width: 16px
+      height: 9px
+      right: 16px
+      top: 46px
+    &__title
+      max-width: 80%
+    &__description
+      display: none
+
+  &-wrapper
+    .show
+      &:after
+        transform: rotate(180deg)
+      .accordion-item__description
+        display: block
+        margin-top: 16px

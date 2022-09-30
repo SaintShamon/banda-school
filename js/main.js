@@ -24,9 +24,14 @@ import {
     calltoaction
 } from './template-parts/blocks/call_to_action';
 
+import {
+    showElem
+} from './template-parts/blocks/accordion';
+
 header();
 footer();
 calltoaction();
 lazy();
 lottie();
 scrollToAnchor();
+showElem();
