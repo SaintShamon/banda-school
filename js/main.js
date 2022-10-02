@@ -28,6 +28,14 @@ import {
     projectsfunc
 } from './template-parts/blocks/projects';
 
+import {
+    showElem
+} from './template-parts/blocks/accordion';
+
+import {
+    slider
+} from './template-parts/blocks/slider';
+
 header();
 footer();
 calltoaction();
@@ -35,3 +43,5 @@ projectsfunc();
 lazy();
 lottie();
 scrollToAnchor();
+showElem();
+slider();
