@@ -24,9 +24,14 @@ import {
     calltoaction
 } from './template-parts/blocks/call_to_action';
 
+import {
+    projectsfunc
+} from './template-parts/blocks/projects';
+
 header();
 footer();
 calltoaction();
+projectsfunc();
 lazy();
 lottie();
 scrollToAnchor();

@@ -1,0 +1,41 @@
+.breadcrumbs
+    margin-top: 68px
+    margin-left: -8.6px
+    line-height: 1.1
+    margin-bottom: 82px
+    width: 100%
+
+    +max-screen($breakpoint-lg)
+        margin-bottom: 42px
+
+    +max-screen($breakpoint-md)
+        margin: 0
+        margin-bottom: 24px
+
+    a
+        font-size: 14px
+        font-weight: 400
+        font-family: $font-family-title
+        color: $color-gold
+        padding: 0 4.6px
+        text-transform: uppercase
+        transition: 0.3s
+        &:hover
+            color: $color-blue
+        +max-screen($breakpoint-md)
+            padding: 0
+            font-size: 14px
+
+    span
+        color: $color-gold
+        text-transform: uppercase
+
+    span.breadcrumb_last
+        font-size: 14px
+        padding: 0 4.6px
+        font-weight: 700
+        color: $color-blue
+        font-family: $font-family-title
+        +max-screen($breakpoint-md)
+            padding: 0
+            font-size: 14px

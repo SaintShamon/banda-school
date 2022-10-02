@@ -1,11 +1,20 @@
 .banner
+    min-height: 80vh
     .section-bg
         background-position: 50% !important
         background-size: cover !important
         background-repeat: no-repeat !important
+    &.inner_page
+        .main_block
+            padding-top: 88px
+        .title_block
+            padding: 60px 0
+        &::before
+            background-image: url('../assets/images/lines/banner_inner_line.svg')
     .main_block
         padding-top: 39px
         padding-bottom: 361px
+
         +max-screen($breakpoint-xl)
             padding-top: 0
             padding-bottom: 301px

@@ -13,8 +13,49 @@
 
     $copyright = get_field('copyright', 'options');
     $copyright_logo = get_field('copyright_logo', 'options');
+    $projects = get_field('projects_item');
+   
 ?>
-<footer class="footer">
+<section class="projects section">
+    <div class="section-bg"></div>
+    <div class="projects_main">
+        <div class="container">
+            <div class="main_block">
+                <?php if($project_block): ?>
+                <div class="title_block">
+                    <h2><?php echo $project_block; ?></h2>
+                </div>
+                <?php endif; ?>
+                <div class="projects_row">
+                    <?php foreach($projects as $post): setup_postdata( $post ); 
+                        $add_image = get_field('add_image');
+                        $add_video = get_field('add_video');
+                     ?>
+                    <div class="project_block">
+                        <?php if($add_video): ?>
+                        <div class="project_block_inner">
+                            <?php echo $add_video; ?>
+                        </div>
+                        <?php endif; ?>
+                        <?php if($add_image): ?>
+                        <div class="project_block_inner">
+                            <img src="<?php echo esc_url($add_image['url']); ?>"
+                                alt="<?php echo esc_attr($add_image['alt']); ?>">
+                        </div>
+                        <?php endif; ?>
+                        <?php if(!empty(get_the_title())): ?>
+                        <div class="project_title">
+                            <p><?php the_title(); ?></p>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                    <?php endforeach; wp_reset_postdata(  ); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer projects_footer">
     <div class="container">
         <div class="footer_top_block">
             <div class="section-bg"></div>

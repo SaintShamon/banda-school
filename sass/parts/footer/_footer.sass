@@ -1,10 +1,16 @@
 .footer
     position: relative
+    &.projects_footer
+        &::before
+            display: none
+        .footer_top_block
+            padding-top: 200px
     &_top_block
         display: flex
         justify-content: space-between
         padding-top: 100px
         padding-bottom: 71px
+
         +max-screen($breakpoint-xm)
             padding-top: 71px
         +max-screen(1200px)

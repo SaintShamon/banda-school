@@ -1,4 +1,8 @@
 <?php 
+    /**
+     * Template Name: Projects page template
+     * Template Post Type: page
+     */
     get_header(); 
     $backgroung_img = get_field('backgroung_img');
 ?>
@@ -37,4 +41,4 @@
         </div>
     </div>
 </main>
-<?php get_footer(); ?>
+<?php get_footer('projects'); ?>

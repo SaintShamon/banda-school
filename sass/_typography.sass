@@ -44,6 +44,8 @@ h3, .h3
 	font-size: 35px
 	line-height: 130%
 	font-family: $font-family-title
+	.components &
+		font-size: 30px
 	+max-screen($breakpoint-xl)
 		font-size: 30px
 	+max-screen($breakpoint-xm)
@@ -196,20 +198,20 @@ p,.p
 			padding-bottom: 0
 			margin-bottom: 0
 	h2,h3,h4,h5,h6
-		margin-top: 80px
+		margin-top: 50px
 		margin-bottom: 30px
+		.components &
+			color: $color-blue
 		+max-screen(1500px)
 			margin-top: 40px
 			margin-bottom: 20px
 		&:first-of-type
 			margin-top: 0
 
-	p,ul,ol
-
 	a
 		transition: 0.3s
-		color: $color-primary
-		font-weight: 500
+		color: $color-blue
+		font-weight: 700
 		&:hover
 			opacity: 0.8
 			text-decoration: underline
@@ -224,21 +226,40 @@ p,.p
 		margin-left: rem(30px)
 		li
 			display: block
-			//padding-left: 25px
-			margin-bottom: 10px
+			position: relative
+			padding-left: 25px
+			padding-top: 30px
+			padding-bottom: 30px
 			line-height: 1.4
+
+			.components &
+				color: $color-gold
 			&:nth-last-child(1)
 				margin-bottom: 0
 			&:before
 				content: ''
-				background-color: $color-primary
-				width: 5px
-				height: 5px
-				min-width: 5px
+				position: absolute
+				background-color: $color-gold
+				width: 12px
+				height: 12px
+				min-width: 12px
 				border-radius: 50%
-				margin-right: 10px
-				margin-bottom: 0.12em
+				left: -10px
+				top: 35px
 				display: inline-block
+			&::after
+				content: ''
+				position: absolute
+				left: 25px
+				bottom: 0
+				height: 2px
+				width: 80%
+				background-color: $color-gold
+
+			&:last-of-type
+				padding-bottom: 0
+				&::after
+					display: none
 			ol
 				margin: rem(10px 0)
 			ul
@@ -252,6 +273,8 @@ p,.p
 			counter-increment: my-counter
 			padding-left: 25px
 			margin-bottom: 10px
+			.components &
+				color: $color-gold
 			&:nth-last-child(1)
 				margin-bottom: 0
 			&:before
@@ -278,28 +301,50 @@ p,.p
 	pre
 		white-space: pre-wrap
 	blockquote
-		margin: rem(25px 0)
 		position: relative
-		border-left: 2px solid $color-primary
-		padding-left: 30px
+		margin: rem(44px 0 57px)
+		position: relative
+		padding-left: 208px
+		padding-top: 102px
+		padding-right: 65px
+		padding-bottom: 62px
+		width: 100%
+		max-width: 87%
+		background-color: $color-blue
 		p
-			font-size: rem(20px)
-			line-height: rem(31px)
+			font-style: italic
+			font-weight: 600
+			font-size: 25px
+			line-height: 31px
+			font-family: $font-family-title
+			color: $color-gold
+		span
+			font-family: $font-family-base
+			font-style: normal
 			font-weight: 400
-			&:nth-last-child(1)
-				font-size: rem(16px)
-				font-weight: 300
-		+max-screen($breakpoint-md)
-
-		&:before
+			font-size: 12px
+			line-height: 30px
+			color: $color-gold
+			text-transform: uppercase
+		&::before
 			content: ''
 			position: absolute
-			top: 0
-			left: -20px
-			width: 60px
-			height: 51px
-			//background-image: url(../assets/images/quote.svg)
+			top: 57px
+			left: 208px
+			width: 26px
+			height: 25px
+			background-image: url(../assets/images/icon/blockquote_icon.svg)
 			background-repeat: no-repeat
 			background-size: contain
 			background-position: center
-			z-index: -1
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 27px
+			width: 148px
+			height: 92%
+			background-image: url(../assets/images/blockquote_image.svg)
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: center

@@ -27,7 +27,7 @@
             <?php
                 else :
             ?>
-            <div class="title_block">
+            <div class="title_block inner_page">
                 <?php if($use_title == true): ?>
                 <h1><?= $title; ?></h1>
                 <?php elseif($use_title == false): ?>
@@ -40,10 +40,10 @@
         </div>
     </div>
     <?php if(is_front_page()): ?>
-        <a class="explore" href="#text_center">
-            <img src="<?= get_template_directory_uri() ?>/assets/images/pig_img.svg" alt="">
-            <span>Explore</span>
-        </a>
+    <a class="explore" href="#text_center">
+        <img src="<?= get_template_directory_uri() ?>/assets/images/pig_img.svg" alt="">
+        <span>Explore</span>
+    </a>
     <?php endif; ?>
 </section>
 <?php endif; ?>

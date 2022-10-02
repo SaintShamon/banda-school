@@ -32,6 +32,12 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Footer',
 		'menu_slug' 	=> 'theme-general-settings_bottom',
 	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+	));
 	
 }
 

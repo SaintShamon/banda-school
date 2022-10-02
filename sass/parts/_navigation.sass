@@ -1,0 +1,188 @@
+.has-sidebar
+    overflow: hidden
+
+    .components
+        max-width: 959px
+        width: 66.6666%
+        margin-bottom: 200px
+
+        +max-screen($breakpoint-lg)
+            order: 2
+            width: 100%
+            max-width: 100%
+
+    &>.container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+
+        +max-screen($breakpoint-lg)
+            flex-direction: column
+
+    .sidebar
+        width: 100%
+        padding-right: 50px
+        max-width: 407px
+        width: 33.33%
+        margin-top: 30px
+
+        +max-screen($breakpoint-xxl)
+            max-width: auto
+
+        +max-screen($breakpoint-lg)
+            width: 100%
+            max-width: 100%
+            padding-left: 0
+            margin-top: 0
+            margin-bottom: 36px
+
+        &__links
+            display: flex
+            flex-direction: column
+            position: relative
+            align-items: flex-end
+            list-style-type: none
+            padding: 11px 39px 300px 25px
+            background-color: $color-lightgold
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                right: -80px
+                width: 325px
+                height: 260px
+                background-image: url(../assets/images/sidebar_img.svg)
+                background-repeat: no-repeat
+                background-size: contain
+                background-position: center
+            +max-screen($breakpoint-lg)
+                align-items: flex-start
+                flex-wrap: wrap
+                flex-direction: row
+                margin: 0 -8px
+                margin-bottom: -18px
+
+            +max-screen($breakpoint-md)
+                margin: 0 -12px
+
+            li.page_item
+                text-align: right
+                line-height: 2
+                margin-top: 45px
+
+                br
+                    display: none
+
+                ul
+                    display: none
+                a
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 25px
+                    line-height: 31px
+                    display: flex
+                    align-items: center
+                    text-align: right
+                    color: $color-gold
+                    font-family: $font-family-title
+                &.current_page_item,
+                &.current_page_parent
+                    & > a
+                        font-size: 28px
+                        line-height: 35px
+                        font-weight: 600
+                        font-family: $font-family-title
+                        color: $color-blue
+                &.current_page_item
+                    position: relative
+                    &::before
+                        position: absolute
+                        content: ''
+                        left: 25px
+                        border-bottom: 4px solid $color-blue
+                        width: 100vw
+                        bottom: -5px
+
+                +max-screen($breakpoint-lg)
+                    line-height: 1.4
+                    margin-bottom: 18px
+                    text-align: center
+                    width: 33%
+                    padding: 0 8px
+
+                +max-screen($breakpoint-md)
+                    width: auto
+                    padding: 0 12px
+                    margin-bottom: 8px
+
+                    a
+                        font-size: 14px
+
+        &__block
+            position: relative
+            margin-top: 27px
+            margin-bottom: 27px
+            &.last_block
+                overflow: hidden
+                &::after
+                    position: absolute
+                    content: ''
+                    width: 101%
+                    height: 40px
+                    bottom: 0
+                    left: 0
+                    background-image: url('../assets/images/Mask_group.svg')
+                    background-size: cover
+
+        &__link
+            position: absolute
+            z-index: 2
+            width: 100%
+            height: 100%
+            display: flex
+            top: 0
+            left: 0
+
+            .link
+                align-self: center
+                width: 100%
+                text-align: center
+                font-family: $font-family-title
+                font-style: normal
+                font-weight: 700
+                font-size: 28px
+                line-height: 30px
+                text-align: center
+                color: #FFFFFF
+                &:hover
+                    color: $color-lightgold
+
+        &__image
+            width: 100%
+            height: 100%
+            &.last
+                &::after
+                    position: absolute
+                    content: ''
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    left: 0
+                    background: linear-gradient(0deg, rgba(37, 34, 90, 0.5), rgba(37, 34, 90, 0.5))
+                    background-size: cover
+            &::after
+                position: absolute
+                content: ''
+                width: 100%
+                height: 100%
+                top: 0
+                left: 0
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+                background-size: cover
+            img
+                display: block
+                width: 100%
+                object-fit: cover
+                height: 100%
+                object-position: center
+                min-height: 258px
