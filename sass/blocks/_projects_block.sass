@@ -3,8 +3,12 @@
     margin-top: 0
     margin-bottom: 0
     z-index: 1
+    +max-screen($breakpoint-xl)
+        min-height: auto
     &.section
         padding-top: 100px
+        +max-screen($breakpoint-xl)
+            padding-bottom: 50px
     .projects_main
         width: 100%
         position: relative
@@ -26,6 +30,12 @@
             background-size: contain
             background-repeat: no-repeat
             background-position: center
+            +max-screen(1368px)
+                top: -101px
+            +max-screen($breakpoint-md)
+                height: 102px
+                top: -71px
+                background-size: cover
         &::after
             position: absolute
             content: ''
@@ -38,10 +48,10 @@
             background-repeat: no-repeat
             background-position: center
             z-index: 1
+
     &_row
         position: relative
         z-index: 1
-        // min-height: 550px
     .project
         &_block_inner
             position: relative
@@ -49,6 +59,16 @@
             max-height: 497px
             overflow: hidden
             max-width: 838px
+            +max-screen($breakpoint-xl)
+                max-height: 427px
+                max-width: 738px
+            +max-screen($breakpoint-xm)
+                max-height: 360px
+                max-width: 640px
+            +max-screen(1368px)
+                max-width: 540px
+            +max-screen($breakpoint-sm)
+                max-width: 90vw
             &::after
                 position: absolute
                 content: ''
@@ -60,6 +80,19 @@
             iframe
                 min-height: 497px
                 width: 838px
+                +max-screen($breakpoint-xl)
+                    min-height: 427px
+                    width: 738px
+                +max-screen($breakpoint-xm)
+                    min-height: 360px
+                    width: 640px
+                +max-screen(1368px)
+                    min-height: 360px
+                    width: 540px
+                +max-screen($breakpoint-sm)
+                    max-width: 90vw
+                    min-height: 68vw
+                    height: auto
             img
                 display: block
                 height: 100%
@@ -67,6 +100,12 @@
                 object-position: center
                 width: 100%
                 min-height: 497px
+                +max-screen($breakpoint-xl)
+                    min-height: 427px
+                +max-screen($breakpoint-xm)
+                    min-height: 360px
+                +max-screen($breakpoint-sm)
+                    min-height: 45vw
         &_title
             margin-top: 14px
             p

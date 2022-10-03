@@ -5,11 +5,15 @@
         max-width: 959px
         width: 66.6666%
         margin-bottom: 200px
-
+        +max-screen($breakpoint-xl)
+            max-width: 819px
+        +max-screen($breakpoint-xm)
+            max-width: 62%
         +max-screen($breakpoint-lg)
             order: 2
             width: 100%
             max-width: 100%
+            margin-bottom: 100px
 
     &>.container
         display: flex
@@ -21,14 +25,12 @@
 
     .sidebar
         width: 100%
-        padding-right: 50px
-        max-width: 407px
+        padding-right: 0
+        max-width: 357px
         width: 33.33%
-        margin-top: 30px
 
-        +max-screen($breakpoint-xxl)
-            max-width: auto
-
+        +max-screen($breakpoint-xm)
+            max-width: 327px
         +max-screen($breakpoint-lg)
             width: 100%
             max-width: 100%
@@ -44,6 +46,7 @@
             list-style-type: none
             padding: 11px 39px 300px 25px
             background-color: $color-lightgold
+
             &::after
                 content: ''
                 position: absolute
@@ -55,21 +58,25 @@
                 background-repeat: no-repeat
                 background-size: contain
                 background-position: center
+                +max-screen($breakpoint-lg)
+                    opacity: 0.7
+                    right: -100px
+                    width: 275px
+                    height: 220px
             +max-screen($breakpoint-lg)
                 align-items: flex-start
                 flex-wrap: wrap
                 flex-direction: row
-                margin: 0 -8px
-                margin-bottom: -18px
-
-            +max-screen($breakpoint-md)
-                margin: 0 -12px
+                margin-bottom: 50px
+                padding: 11px 39px 200px 25px
+                background: none
 
             li.page_item
                 text-align: right
                 line-height: 2
                 margin-top: 45px
-
+                +max-screen($breakpoint-xm)
+                    margin-top: 25px
                 br
                     display: none
 
@@ -85,6 +92,16 @@
                     text-align: right
                     color: $color-gold
                     font-family: $font-family-title
+                    +max-screen($breakpoint-xm)
+                        font-size: 20px
+                        line-height: 26px
+                    +max-screen($breakpoint-lg)
+                        text-align: center
+                        width: 100%
+                        display: block
+                        font-weight: 600
+                    +max-screen($breakpoint-sm)
+                        text-align: left
                 &.current_page_item,
                 &.current_page_parent
                     & > a
@@ -93,16 +110,28 @@
                         font-weight: 600
                         font-family: $font-family-title
                         color: $color-blue
+                        +max-screen($breakpoint-xm)
+                            font-size: 23px
+                            line-height: 30px
+                        +max-screen($breakpoint-lg)
+                            font-size: 20px
+                            line-height: 26px
+                            text-align: center
+                        +max-screen($breakpoint-sm)
+                            text-align: left
                 &.current_page_item
                     position: relative
                     &::before
                         position: absolute
                         content: ''
-                        left: 25px
+                        left: 55px
                         border-bottom: 4px solid $color-blue
                         width: 100vw
                         bottom: -5px
-
+                        +max-screen($breakpoint-xm)
+                            left: 65px
+                        +max-screen($breakpoint-lg)
+                            display: none
                 +max-screen($breakpoint-lg)
                     line-height: 1.4
                     margin-bottom: 18px
@@ -116,12 +145,14 @@
                     margin-bottom: 8px
 
                     a
-                        font-size: 14px
+                        // font-size: 14px
 
         &__block
             position: relative
             margin-top: 27px
             margin-bottom: 27px
+            +max-screen($breakpoint-lg)
+                display: none
             &.last_block
                 overflow: hidden
                 &::after
@@ -133,7 +164,8 @@
                     left: 0
                     background-image: url('../assets/images/Mask_group.svg')
                     background-size: cover
-
+                    +max-screen($breakpoint-xm)
+                        bottom: -5px
         &__link
             position: absolute
             z-index: 2
@@ -154,6 +186,10 @@
                 line-height: 30px
                 text-align: center
                 color: #FFFFFF
+                +max-screen($breakpoint-xm)
+                    font-size: 23px
+                    line-height: 25px
+
                 &:hover
                     color: $color-lightgold
 
@@ -186,3 +222,5 @@
                 height: 100%
                 object-position: center
                 min-height: 258px
+                +max-screen($breakpoint-xm)
+                    min-height: 228px

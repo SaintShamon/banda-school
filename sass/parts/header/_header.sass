@@ -45,6 +45,11 @@
                 line-height: 19px
                 text-align: right
                 color: #FFFFFF
+                transition: .2s ease-out
+                &:hover
+                    color: $color-red
+                    font-weight: 700
+                    transition: .2s ease-out
             &:last-of-type
                 margin-right: 0
                 &::before
@@ -82,15 +87,15 @@
                 background: #fff
                 margin-bottom: 6px
                 &:first-of-type
-                    background: $color-red
+                    background: #8E302A
                 &:last-of-type
                     background: $color-blue
                     margin-bottom: 0
-// #wpadminbar
-//     +max-screen(600px)
-//         position: fixed
-// .admin-bar
-//     .header_block
-//         top: 32px
-//         +max-screen($breakpoint-md)
-//             top: 46px
+#wpadminbar
+    +max-screen(600px)
+        position: fixed
+.admin-bar
+    .header_block
+        top: 32px
+        +max-screen($breakpoint-md)
+            top: 46px

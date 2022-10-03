@@ -1,7 +1,9 @@
 .banner
     min-height: 80vh
+    +max-screen($breakpoint-xm)
+        min-height: auto
     .section-bg
-        background-position: 50% !important
+        background-position: top !important
         background-size: cover !important
         background-repeat: no-repeat !important
     &.inner_page
@@ -14,11 +16,10 @@
     .main_block
         padding-top: 39px
         padding-bottom: 361px
-
         +max-screen($breakpoint-xl)
             padding-top: 0
             padding-bottom: 301px
-        +max-screen($breakpoint-sm)
+        +max-screen($breakpoint-xm)
             padding-top: 39px
     .logo_block
         margin: 0 auto

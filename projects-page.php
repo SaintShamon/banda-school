@@ -4,6 +4,8 @@
      * Template Post Type: page
      */
     get_header(); 
+    $use_title = get_field('use_custom_title');
+    $title = get_field('custom_title');
     $backgroung_img = get_field('backgroung_img');
 ?>
 <main class="has-sidebar">

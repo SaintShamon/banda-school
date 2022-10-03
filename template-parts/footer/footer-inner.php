@@ -14,7 +14,7 @@
     $copyright = get_field('copyright', 'options');
     $copyright_logo = get_field('copyright_logo', 'options');
     $projects = get_field('projects_item');
-   
+    $project_block = get_field('project_block');
 ?>
 <section class="projects section">
     <div class="section-bg"></div>

@@ -20,7 +20,7 @@
             $link_target = $link['target'] ? $link['target'] : '_self';
         endif;
         if($link_2):
-            $link_target = $link_2['target'] ? $link_2['target'] : '_self';
+            $link_target_2 = $link_2['target'] ? $link_2['target'] : '_self';
         endif;
     }
 ?>
