@@ -20,6 +20,20 @@
 
     &.service
         top: 0 !important
+    .search_block
+        display: none
+        &.active
+            display: block
+    .is-form-style
+        border-bottom: 2px solid $color-blue
+        input.is-search-input
+            border: none !important
+            background: none
+            font-family: $font-family-title
+            color: $color-blue
+        input.is-search-submit, .is-search-icon
+            border: none !important
+            background: none
 
 .side-inner
     min-height: 100vh

@@ -56,6 +56,17 @@ function header() {
             }
         });
 
+        $('.side-panel .search').on('click', function () {
+            event.preventDefault();
+            $('.side-panel .search_block').addClass('active');
+        });
+        $('.header .search_block').focusout(function () {
+            $('header .search_block').removeClass('active');
+        });
+        $('side-panel .search_block .is-search-submit').submit(function (e) {
+            e.preventDefault()
+        });
+
     });
 }
 

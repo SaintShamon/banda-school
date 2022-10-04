@@ -70,6 +70,9 @@
                                     <nav>
                                         <?php wp_nav_menu(array( 'theme_location' => 'burger-menu' )) ?>
                                     </nav>
+                                    <div class="search_block">
+                                        <?php echo do_shortcode('[ivory-search id="413" title="Default Search Form"]'); ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
