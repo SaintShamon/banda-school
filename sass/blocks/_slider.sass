@@ -1,8 +1,41 @@
 .slider
   position: relative
+  min-height: 905px
+  margin: 134px 0 34px
+  +max-screen($breakpoint-xm)
+    min-height: 705px
+  +max-screen($breakpoint-lg)
+    margin: 0
+  +max-screen($breakpoint-md)
+    min-height: 68vw
+  // +max-screen($breakpoint-sm)
+  //   min-height: 100vw
+  &_inner
+    width: 100vw
+    height: 100%
+    position: absolute
+    top: 0
+    left: 25%
+    margin-left: calc(-1 * (50vw / 2))
+    +min-screen(1921px)
+      width: 120vw
+      left: 50%
+      margin-left: calc(-1 * (100vw / 2))
+    +max-screen($breakpoint-xxxl)
+      width: 105vw
+    +max-screen(1600px)
+      left: 30%
+    +max-screen($breakpoint-lg)
+      width: 100vw
+      left: 50%
+      margin-left: calc(-1 * (100vw / 2))
   .slick-slider
-    max-height: 827px
+    max-height: 905px
     overflow: hidden
+    +max-screen($breakpoint-xm)
+      max-height: 705px
+    +max-screen($breakpoint-md)
+      max-height: none
     &::before
       position: absolute
       content: ''
@@ -13,8 +46,11 @@
       background-image: url('../assets/images/lines/banner_line.svg')
       background-size: cover
       background-repeat: no-repeat
-      background-position: center
+      background-position: top
       z-index: 1
+      +max-screen($breakpoint-sm)
+        height: 50px
+        bottom: -10px
     &::after
       position: absolute
       content: ''
@@ -26,14 +62,34 @@
       background-image: url('../assets/images/lines/banner_line.svg')
       background-size: cover
       background-repeat: no-repeat
-      background-position: center
+      background-position: top
+      +max-screen($breakpoint-sm)
+        height: 50px
+        top: -20px
   &-title
     position: absolute
-    width: 100%
+    // width: 100%
     text-align: center
-    bottom: 200px
+    bottom: 177px
+
+    width: max-content
+    left: calc(50% - 234px)
+    +max-screen($breakpoint-xm)
+      left: calc(55% - 234px)
+    +max-screen($breakpoint-lg)
+      position: relative
+      margin: 0 auto
+      left: auto
+      width: 100%
+      bottom: 217px
+    +max-screen($breakpoint-sm)
+      bottom: 100px
     h2
       margin-bottom: 30px
+      +max-screen($breakpoint-md)
+        margin-bottom: 10px
+        font-size: 20px
+
   &-pagination
     display: flex
     justify-content: center
@@ -51,11 +107,24 @@
       border-radius: 50%
       &:last-child
         margin-right: 0
+      +max-screen($breakpoint-md)
+        width: 22px
+        height: 22px
+        font-size: 12px
     .next, .prev
       display: flex
       align-items: center
     .prev
       transform: rotate(180deg)
     .active
-      background: rgba(97,9,30, .3)
-
+      background: rgba(97,9,30, 1)
+  .slick-slide
+    img
+      object-fit: cover
+      max-height: 905px
+      height: 100%
+      +max-screen($breakpoint-xm)
+        max-height: 705px
+      +max-screen($breakpoint-md)
+        max-height: none
+        height: auto

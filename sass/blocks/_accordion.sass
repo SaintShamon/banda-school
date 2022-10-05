@@ -8,6 +8,8 @@
     padding: 35px 14px
     border-bottom: 2px solid $color-gold
     position: relative
+    +max-screen($breakpoint-xl)
+      padding: 20px 14px
     &:after
       content: ''
       position: absolute
@@ -16,6 +18,8 @@
       height: 9px
       right: 16px
       top: 46px
+      +max-screen($breakpoint-xl)
+        top: 32px
     &__title
       max-width: 80%
     &__description

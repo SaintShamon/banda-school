@@ -1,9 +1,17 @@
 .table_section
   // margin-bottom: 103px
+  +max-screen($breakpoint-md)
+    overflow-x: scroll
+    max-width: 768px
   table
     font-weight: 400
     font-size: 18px
     line-height: 25px
+    +max-screen($breakpoint-md)
+      font-size: 15px
+      line-height: 18px
+      width: 768px
+
     thead
       tr
         background: $color-blue
