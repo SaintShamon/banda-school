@@ -1,6 +1,8 @@
 <?php 
     get_header(); 
     $backgroung_img = get_field('backgroung_img');
+    $use_title = get_field('use_custom_title');
+    $title = get_field('custom_title');
 ?>
 <main class="has-sidebar">
     <section class="banner inner_page section">

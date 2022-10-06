@@ -56,6 +56,8 @@
                 padding-right: 56px
                 padding-bottom: 41px
                 box-sizing: content-box
+                +max-screen($breakpoint-xl)
+                    padding-right: 36px
                 +max-screen($breakpoint-xm)
                     max-width: 37%
                 +max-screen(1200px)
@@ -88,6 +90,11 @@
                 height: 234px
                 left: 70%
                 bottom: 20px
+                +max-screen($breakpoint-xl)
+                    width: 251px
+                    height: auto
+                    left: 84%
+                    bottom: 0
                 +max-screen(1200px)
                     position: relative
                     left: auto
